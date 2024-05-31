@@ -1,0 +1,33 @@
+{
+  "name": "rollup-plugin-generate-icon",
+  "version": "0.0.1",
+  "description": "A rollup plugin to generate icons of different sizes",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "rollup",
+    "rollup-plugin",
+    "jimp",
+    "icons"
+  ],
+  "homepage": "https://github.com/kaze-k/rollup-plugin-generate-icon",
+  "author": "kaze-k <kerkaze@outlook.com> (https://github.com/kaze-k)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaze-k/rollup-plugin-generate-icon.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kaze-k/rollup-plugin-generate-icon/issues"
+  },
+  "scripts": {
+    "prebuild": "rm -rf ./dist",
+    "build": "tsc",
+    "eslint:check": "eslint src",
+    "eslint:fix": "eslint --fix src",
+    "prettier:check": "prettier --check src",
+    "prettier:format": "prettier --write src"
+  }
+}
