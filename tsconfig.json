@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "declaration": false,
+    "outDir": "dist",
+    "allowJs": true,
+    "noEmit": false,
+    "pretty": true,
+    "strict": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "strictPropertyInitialization": false,
+    "removeComments": true,
+    "importHelpers": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules"]
+}

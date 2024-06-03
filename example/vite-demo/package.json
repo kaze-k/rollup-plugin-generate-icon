@@ -1,0 +1,16 @@
+{
+  "name": "vite-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:watch": "vite build --watch",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "rollup-plugin-generate-icon": "link:../../",
+    "vite": "^5.2.0"
+  }
+}

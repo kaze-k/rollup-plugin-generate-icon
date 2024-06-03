@@ -2,7 +2,17 @@
   "name": "rollup-plugin-generate-icon",
   "version": "0.0.1",
   "description": "A rollup plugin to generate icons of different sizes",
-  "main": "dist/index.js",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -23,11 +33,25 @@
     "url": "https://github.com/kaze-k/rollup-plugin-generate-icon/issues"
   },
   "scripts": {
-    "prebuild": "rm -rf ./dist",
-    "build": "tsc",
+    "prebuild": "tsc",
+    "build": "unbuild",
     "eslint:check": "eslint src",
     "eslint:fix": "eslint --fix src",
     "prettier:check": "prettier --check src",
     "prettier:format": "prettier --write src"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.13",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.5",
+    "unbuild": "^2.0.0"
+  },
+  "dependencies": {
+    "rollup": "^4.18.0",
+    "sharp": "0.32.6"
   }
 }
